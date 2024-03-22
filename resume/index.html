@@ -8,6 +8,13 @@
 
     <!-- linkk to css  -->
     <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='http://fonts.googleapis.com/css?family=Rokkitt|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700'
+        rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet'
+        type='text/css'>
+
 
     <!-- link to js  -->
     <script src="script.js"></script>
@@ -15,18 +22,162 @@
 
 <body>
     <nav>
-        <p>enos muthiani mutuku</p>
+        <a href="#" class="user">enos muthiani mutuku</a>
         <div class="nav">
-
+            <a href="#" class="toc-link" id="toc-link"><span>&#9776;</span></a>
+            <div class="nav-side">
+                <a href="#about">about</a>
+                <a href="#resume">Résumé</a>
+                <a href="#cert">certificate</a>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
+        <!-- About Me -->
+        <div id="about">
+            <div class="inner">
+                <div class="component">
+                    <p>Hello, world! I'm a developer and designer.</p>
+                    <!-- Console -->
+                    <div class="code">
+                        <div class="console">
+                            &gt; enos.origin<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "Machakos, Nairobi Kenya"<br /><br /></span>
+                            &gt; enos.education<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "Murang'a University of Technology"<br /><br /></span>
+                            &gt; enos.major<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "Computer Science"<br /><br /></span>
+                            &gt; enos.expectedGraduation<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "Sep 2025"<br /><br /></span>
+                            &gt; enos.interests<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; ["linux", "Code", "coffee", "music","bikes","gaming"]<br /><br /></span>
+                            &gt; enos.resume<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank"
+                                    href="enos_resume.pdf">enos_resume.pdf</a>"<br /></span>
 
+                            &gt; enos.email<br />
+                            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank"
+                                    href="mailto:emuthiani26@gmail.com">emuthiani26@gmail.com</a>"<br /><br /></span>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+            </div>
+        </div>
+
+        <!-- Resume -->
+        <div id="resume">
+            <div class="inner">
+                <div class="component">
+                    <h1>resume</h1>
+                    <div class="education">
+                        <!-- Résumé : Education -->
+                        <p class="tagline">Education</p>
+                        <!-- Résumé : Education : MUT -->
+                        <div class="school">
+                            <a href="https://www.mut.ac.ke/" target="_blank" rel="noopener noreferrer"
+                                class="school-logo">
+                                <img src="./assets/mut_logo.png" alt="MUT">
+                            </a>
+                            <div class="details">
+                                <div class="top">
+                                    <div>
+                                        <h4>Murang'a University of Teachnology</h4>
+                                        <span>Sep 2021 - Present</span>
+                                    </div>
+                                    <div>
+                                        <h4>BS.Computer Science,</h4>
+                                        <span>Murang'a, Kenya</span>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>relevant coursework: </p>
+                                    <ul>
+                                        <li>Fundamentals of Computer Programming</li>
+                                        <li>Object-Oriented Programming</li>
+                                        <li>Principles of Software Development</li>
+                                        <li>Discrete Methods in Computer Science</li>
+                                        <li>Design and Analysis of Algorithms</li>
+                                        <li>Microcontrollers and Microprocessors Technology</li>
+                                        <li> Research Methods in Computing </li>
+                                        <li>Artificial Intelligence</li>
+                                        <li>Mobile Application Development</li>
+                                        <li>Computer Network Fundamentals</li>
+                                        <li>Operating Systems</li>
+                                        <li> Database Management</li>
+                                        <li>Advanced Web Technologies</li>
+                                        <li>Circuit Design</li>
+
+                                    </ul>
+                                    <div class="skills">
+                                        <div class="skill">C/C++</div>
+                                        <div class="skill">Java</div>
+                                        <div class="skill">Visual Basic</div>
+                                        <div class="skill">Assembly Language</div>
+                                        <div class="skill">PHP</div>
+                                        <div class="skill">Javascript</div>
+                                        <div class="skill">HTML & CSS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Résumé : Education : MUT -->
+                        <div class="school">
+                            <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer"
+                                class="school-logo">
+                                <img src="./assets/hubspot_logo.png" alt="hubspot logo">
+                            </a>
+                            <div class="details">
+                                <div class="top">
+                                    <div>
+                                        <h4>HubSpot - Academy</h4>
+                                        <span>Sep 2022 - 2024</span>
+                                    </div>
+                                    <div>
+                                        <h4>SEO I, SEO II</h4>
+                                        <span>online learning</span>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p>Search engine optimization </p>
+                                    <div class="skills">
+                                        <div class="skill">Google Console</div>
+                                        <div class="skill">Responsive Web Design</div>
+                                        <div class="skill">Google Data Studio</div>
+                                        <div class="skill">Google Analytics</div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- certifications -->
+        <div id="cert">
+            <div class="inner">
+                <div class="component">
+                    <h1>certificates</h1>
+                    <div class="certs-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-footer
+        <a href="http://enos.vercel.app" target="_blank" rel="noopener noreferrer">my portfolio</a>
+        <p>&copy;2024 enos . All rights preserved.</p>
+        <a href="/"> resume</a>
     </footer>
 </body>
 
