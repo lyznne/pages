@@ -98,11 +98,7 @@ nav .user {
     height: 200px;
     position: absolute;
     color: var(--bg-dark);
-<<<<<<< HEAD
     top: 100%;
-=======
-    top: 107px;
->>>>>>> 452d865f02b06336a974086dfb246b0399cd72ae
     right: 0%;
     padding: var(--padd-lg);
     text-transform: uppercase;
@@ -137,14 +133,12 @@ main {
 
 }
 #cert {
-<<<<<<< HEAD
+
     background: lightslategray ;
     padding: var(--padd-lg) 0;
-=======
-    background-color: var(--bg-dark);
+
     padding: var(--padd-lg) 0;
-    color: lavender;
->>>>>>> 452d865f02b06336a974086dfb246b0399cd72ae
+
 }
 .inner {
     display: flex;
@@ -158,10 +152,7 @@ main {
     border-radius: var(--rounded);
     padding: var(--padd-lg);
     width: 60%;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 452d865f02b06336a974086dfb246b0399cd72ae
+
 }
 .component>h1,
 .component>p {
@@ -276,13 +267,11 @@ border-bottom: 1px solid  #abb2bf;
     font-size: 16px;
     color: #010c24cb;
 }
-<<<<<<< HEAD
+
 .details .content>p {
     margin-bottom:var(--padd-sm);
 }
-=======
 
->>>>>>> 452d865f02b06336a974086dfb246b0399cd72ae
 .details ul {
     margin: var(--padd-lg);
 }
