@@ -103,7 +103,7 @@ nav .user {
     padding: var(--padd-lg);
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 
     display: flex;
     flex-direction: column;
