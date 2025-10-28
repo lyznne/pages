@@ -3,36 +3,23 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
   -webkit-font-smoothing: antialiased !important;
 }
 
 :root {
-  /* colors  */
   --bg-light: #fafafa;
   --bg-accent: #cbcad4;
   --bg-dark: rgba(0, 13, 32, 1);
   --accent-light-c: rgba(209, 217, 223, 0.75);
-
   --info: rgba(255, 92, 0, 1);
-
-  /* padding and margins  */
   --padd-sm: 0.25rem;
   --padd-md: 0.75rem;
   --padd-lg: 1.2rem;
   --padd-xl: 2.2rem;
   --padd-xxl: 5.75rem;
   --rounded: 0.5rem;
-  /* 
-  --accent-light-a: rgba(240, 240, 240, 1);
-
-  --accent-light-c: rgba(209, 217, 223, 0.75);
- 
-
-  --accent-light-b: #A0B2C2;  */
 }
 
-/* ===== reset css  ========  */
 a {
   text-decoration: none;
   color: inherit;
@@ -50,13 +37,16 @@ pre {
   font-size: 1em;
 }
 
+html,
 body {
-  min-height: 100dvh;
-
   scroll-behavior: smooth;
 }
 
-/* nav styles  */
+body {
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -87,7 +77,7 @@ nav .user {
 .nav .nav-side {
   z-index: 3;
   padding-top: var(--padd-lg);
-  height: 200px;
+  height: auto;
   position: absolute;
   color: var(--bg-dark);
   top: 100%;
@@ -96,7 +86,6 @@ nav .user {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 300;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,10 +110,25 @@ main {
 }
 
 #cert {
-  background: lightslategray;
+  background: #92a7bb;
+  padding: var(--padd-lg) 0;
+  height: 65dvh;
+}
+
+#experience {
+  background: #8196b3;
+  padding: var(--padd-lg) 0;
+}
+
+#languages {
+  padding: var(--padd-lg) 0;
+  height: 20dvh;
+}
+
+#references {
+  background: #6b7d99;
   padding: var(--padd-lg) 0;
 
-  padding: var(--padd-lg) 0;
 }
 
 .inner {
@@ -135,14 +139,13 @@ main {
 }
 
 .component {
-  /* border: .5px dashed lavender; */
   border-radius: var(--rounded);
   padding: var(--padd-lg);
   width: 60%;
 }
 
-.component > h1,
-.component > p {
+.component>h1,
+.component>p {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
@@ -162,24 +165,23 @@ main {
 .console {
   text-align: start;
   font-family: monospace;
-  /* color: #abb2bf; */
   color: var(--accent-light-c);
   text-transform: lowercase;
   white-space: pre-line;
 }
 
 .answer,
-.answer > a {
+.answer>a {
   color: #56b6c2;
   font-family: monospace;
 }
 
-/* resume  css stylings */
-.component > h1 {
+.component>h1 {
   color: var(--bg-dark);
 }
 
-.education {
+.education,
+.experience-section {
   margin: var(--padd-lg) 0;
 }
 
@@ -192,12 +194,14 @@ main {
   border-bottom: 1px solid #abb2bf;
 }
 
-.education .school {
+.education .school,
+.experience-item {
   padding: var(--padd-md) 0;
   position: relative;
 }
 
-.education .school-logo {
+.education .school-logo,
+.experience-logo {
   position: absolute;
   top: 5%;
   left: -15%;
@@ -209,16 +213,14 @@ main {
   border-radius: 50%;
 }
 
-.education .school-logo img {
+.education .school-logo img,
+.experience-logo img {
   padding: 1px;
   margin: 1px;
-
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: contain;
-  width: 70px;
-  height: 70px;
 }
 
 .details .top {
@@ -229,10 +231,9 @@ main {
   padding: var(--padd-lg) 0;
 }
 
-.details .top > div {
+.details .top>div {
   display: flex;
   width: 100%;
-
   justify-content: space-between;
   align-items: center;
 }
@@ -256,7 +257,7 @@ main {
   color: #010c24cb;
 }
 
-.details .content > p {
+.details .content>p {
   margin-bottom: var(--padd-sm);
 }
 
@@ -268,12 +269,12 @@ main {
   padding-left: var(--padd-lg);
   line-height: 26px;
   margin-bottom: var(--padd-sm);
-
   list-style-type: none;
 }
 
-.details ul li::marker {
-  content: "🚀";
+.details ul li::before {
+  content: "🚀 ";
+  margin-right: 8px;
 }
 
 .skills {
@@ -293,14 +294,85 @@ main {
   border-radius: var(--rounded);
 }
 
-/* footer css stylings  */
+/* Certificates styling */
+.certs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: var(--padd-lg);
+  margin-top: var(--padd-lg);
+}
+
+.cert-card {
+  background: var(--bg-light);
+  border-radius: var(--rounded);
+  padding: var(--padd-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padd-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: var(--padd-md);
+  margin-bottom: var(--padd-sm);
+}
+
+.cert-icon {
+  width: 50px;
+  height: 50px;
+  background: color-mix(in srgb, var(--bg-accent) 50%, transparent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.cert-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.cert-title {
+  flex: 1;
+}
+
+.cert-title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-dark);
+  margin-bottom: 4px;
+}
+
+.cert-title p {
+  font-size: 13px;
+  color: #525c74;
+  text-transform: none;
+  text-align: left;
+}
+
+.cert-date {
+  font-size: 12px;
+  color: #525c74;
+  text-align: right;
+}
+
+
+
 footer {
   width: 100%;
   min-height: 140px;
   height: auto;
   padding: var(--padd-xl) var(--padd-lg);
   color: var(--bg-dark);
-
   background: var(--bg-light);
   font-size: 14px;
   font-weight: 400;
@@ -315,7 +387,7 @@ footer {
   width: 100%;
 }
 
-.footer > div {
+.footer>div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -327,8 +399,6 @@ footer a {
   padding: var(--padd-sm);
 }
 
-/* ===================  responsive design ================= */
-/* small device  */
 @media only screen and (max-width: 540px) {
   .nav-side {
     visibility: hidden;
@@ -338,8 +408,8 @@ footer a {
     font-size: 20px;
   }
 
-  .component > h1,
-  .component > p {
+  .component>h1,
+  .component>p {
     font-weight: 400;
     font-size: 15px;
   }
@@ -356,14 +426,19 @@ footer a {
     flex-direction: column;
   }
 
-  .details .top > div {
+  .details .top>div {
     flex-direction: column;
   }
 
-  .education .school-logo {
+  .education .school-logo,
+  .experience-logo {
     position: absolute;
     top: 2%;
     left: 147px;
+  }
+
+  .certs-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -372,49 +447,26 @@ footer a {
     visibility: hidden;
   }
 
-  .nav .toc-link {
-    font-size: 24px;
-  }
-
-  .component > h1,
-  .component > p {
-    font-weight: 400;
-    font-size: 16px;
-  }
-
   .component {
     width: 86%;
   }
 
-  .details .top {
-    flex-direction: column;
-  }
-
-  .details .top > div {
-    flex-direction: column;
-  }
-
-  .education .school-logo {
+  .education .school-logo,
+  .experience-logo {
     left: -20%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 998px) {
-  .component > h1,
-  .component > p {
-    font-weight: 400;
-    font-size: 16px;
-  }
 
-
-
-  .education .school-logo {
+  .education .school-logo,
+  .experience-logo {
     left: -20%;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-    .component {
-        width: 50%;
-    }
+  .component {
+    width: 50%;
+  }
 }
